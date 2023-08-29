@@ -1,13 +1,36 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>register</ion-title>
+  <ion-toolbar color="success">
+    <ion-title>Registro</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">register</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Qué es lo que deseas hacer con la basura reciclable</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-radio-group [allowEmptySelection]="true" value="CLIENT">
+        <ion-item>
+        <ion-label>Quiero COMPRAR</ion-label>
+        <ion-radio value="CLIENT" slot="start" ></ion-radio><br />
+      </ion-item>
+      <ion-item>
+        <ion-label>Quiero VENDER</ion-label>
+        <ion-radio value="SELLER" slot="start"></ion-radio><br />
+      </ion-item>
+
+      </ion-radio-group>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Contacto</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-input type="text" label="Nombre" labelPlacement="floating" placeholder="Escribe tu nombre completo"></ion-input>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
