@@ -1,13 +1,23 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>login</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content  class="background-color">
+  <div class="flex-center">
+    <ion-card >
+      <ion-card-header>
+        <ion-card-title color="success">Recicla</ion-card-title>
+      </ion-card-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">login</ion-title>
-    </ion-toolbar>
-  </ion-header>
+      <ion-card-content >
+        <ion-item>
+          <ion-input type="email" label="Email" labelPlacement="floating" placeholder="Enter text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="password" label="Pasword" labelPlacement="floating" placeholder="Enter text"></ion-input>
+        </ion-item>
+        <ion-button color="dark" fill ="clear" size="full">Olvidaste tu email/password</ion-button>
+        <ion-button color="success" size="full">Iniciar Sesión</ion-button>
+        <ion-button color="success" fill ="clear"  size="full">Regístrate</ion-button>
+      </ion-card-content>
+    </ion-card>
+</div>
 </ion-content>
+
+
