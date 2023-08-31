@@ -1,22 +1,30 @@
 <ion-card>
   <ion-card-header>
-    <ion-card-subtitle>Llamadas de Recogida anteriores</ion-card-subtitle>
+    <ion-card-subtitle *ngIf="hasHeader">Llamadas de Recogida anteriores</ion-card-subtitle>
   </ion-card-header>
       <ion-card-content>
         <ion-item lines="none">
-          <ion-icon name="hourglass-outline" slot="start" color="warning"></ion-icon>
+          <ion-icon *ngIf="status === 'hold'" name="hourglass-outline" slot="start" color="warning"></ion-icon>
+          <ion-icon  *ngIf="status === 'processing'" name="archive-outline" slot="start" color="secondary"></ion-icon>
+          <ion-icon *ngIf="status === 'finished'" name="checkmark-circle-outline" slot="start" color="primary"></ion-icon>
           <ion-label>
-            En espera
-            <p>22/04/2023 16:04:00</p>
+            <span *ngIf="status ==='hold'" >En Espera</span>
+            <span *ngIf="status ==='processing'" >En Proceso</span>
+            <span *ngIf="status ==='finished'" >Completado</span>
+            <p>{{upDateAt}}</p>
           </ion-label>
         </ion-item>
         <ion-item lines="none">
           <ion-label>
-            <p>Creado el 30/08/2023</p>
-            <p>Nota: tengo dos bolsas completamente llenas, una es de botellas de plástico y la otra es de vidrio</p>
+            <p>Creado el {{createdAt}}</p>
+            <p *ngIf="notes" >Nota: {{notes}}</p>
           </ion-label>
+        </ion-item >
+        <ion-item lines="none" *ngIf="status==='finished'">
+          <ion-icon name="trophy" slot="start" color="success"></ion-icon>
+          <ion-label color="success">{{value}}</ion-label>
         </ion-item>
-        <ion-button color="success" size="full" fill="clear">Ver todo</ion-button>
+        <ion-button *ngIf="hasFooter" color="success" size="full" fill="clear">Ver todo</ion-button>
       </ion-card-content>
 
 </ion-card>
