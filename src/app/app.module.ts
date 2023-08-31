@@ -11,7 +11,7 @@ import { PickupCallCardModule } from './components/pickup-call-card/pickup-call-
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,PickupCallCardModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, PickupCallCardModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

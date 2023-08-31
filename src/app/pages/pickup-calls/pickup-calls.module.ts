@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { PickupCallsPageRoutingModule } from './pickup-calls-routing.module';
 
 import { PickupCallsPage } from './pickup-calls.page';
+import { PickupCallCardModule } from '../../components/pickup-call-card/pickup-call-card.module';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { PickupCallsPage } from './pickup-calls.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    PickupCallsPageRoutingModule
+    PickupCallsPageRoutingModule,
+    PickupCallCardModule
   ],
   declarations: [PickupCallsPage],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
