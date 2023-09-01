@@ -1,5 +1,9 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-back-button title=""></ion-back-button>
+
+    </ion-buttons>
     <ion-title>Registro</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -66,7 +70,7 @@
           <ion-input type="text" label="Localidad" labelPlacement="floating" placeholder="Escribe tu localidad"></ion-input>
         </ion-item>
       </ion-card-content>
-      <ion-button size="full" color="success">Registrarme</ion-button>
+      <ion-button size="full" color="success" (click)="register()">Registrarme</ion-button>
     </ion-card>
 
 

@@ -19,11 +19,12 @@
     </ion-item>
   </ion-list>
 
-<app-pickup-call-card [hasHeader]="true" [hasFooter]="true"></app-pickup-call-card>
+<app-pickup-call-card [hasHeader]="true" [hasFooter]="true" status="hold" upDateAt="25/04/23 16:29" createdAt="24/04/23"
+notes="tengo dos bolsas completamente llenas, una es de botellas de plástico y la otra es de vidrio" footer  (click)="goToPickupCalls()"></app-pickup-call-card>
 
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button color="success">
-      <ion-icon name="add"></ion-icon>
+    <ion-fab-button color="success"(click)="newPickupCall()">
+      <ion-icon  name="add"></ion-icon>
     </ion-fab-button>
   </ion-fab>
 </ion-content>

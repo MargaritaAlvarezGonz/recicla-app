@@ -22,4 +22,6 @@ export class PickupCallCardComponent implements OnInit {
   ngOnInit() {
   }
 
+  
+
 }
