@@ -10,7 +10,7 @@
           <ion-item>
             <ion-input type="email" formControlName="email"  label="Email" labelPlacement="floating" placeholder="Enter text"></ion-input>
           </ion-item>
-
+          <app-error-message [field]="form.get('email')" message="Email is mandatory"></app-error-message>
           <ion-item>
             <ion-input type="password" formControlName="password" label="Pasword" labelPlacement="floating" placeholder="Enter text"></ion-input>
           </ion-item>
