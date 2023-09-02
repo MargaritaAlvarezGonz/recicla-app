@@ -10,12 +10,12 @@
           <ion-item>
             <ion-input type="email" formControlName="email"  label="Email" labelPlacement="floating" placeholder="Enter text"></ion-input>
           </ion-item>
-          <app-error-message [field]="$any(form.get('email'))" error="required" message="Email is mandatory"></app-error-message>
+          <app-error-message [field]="$any(form.get('email'))" error="required" message="Email es obligatorio"></app-error-message>
           <app-error-message [field]="$any(form.get('email'))" error="email" message="Email is invalid"></app-error-message>
           <ion-item>
             <ion-input type="password" formControlName="password" label="Pasword" labelPlacement="floating" placeholder="Enter text"></ion-input>
           </ion-item>
-          <app-error-message [field]="$any(form.get('password'))" error="required" message="Password is mandatory"></app-error-message>
+          <app-error-message [field]="$any(form.get('password'))" error="required" message="Password es obligatorio"></app-error-message>
 
           <ion-button color="dark" fill ="clear" size="full" >Olvidaste tu email/password</ion-button>
           <ion-button color="success" size="full" [disabled]="!form.valid" (click)="login()">Iniciar Sesión</ion-button>
