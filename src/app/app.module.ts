@@ -11,13 +11,13 @@ import { AppStoreModule } from 'src/store/App.StoreModule';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { LoadingComponent } from './components/loading/loading.component';
 import { LoginPageModule } from './pages/login/login.module';
-import { LoadingModule } from './components/loading/loading.module';
+
 
 
 
 @NgModule({
-  declarations: [AppComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, PickupCallCardModule, LoadingModule,
+  declarations: [AppComponent, LoadingComponent],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, PickupCallCardModule,
     ...AppStoreModule,
   StoreDevtoolsModule.instrument({maxAge: 25})],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
