@@ -3,5 +3,6 @@ import { loadingReducer } from "./loading/loading.reducers";
 
 export const AppStoreModule = [
   StoreModule.forRoot([]),
-  StoreModule.forFeature("loading",loadingReducer)
+  StoreModule.forFeature("loading",loadingReducer),
+  StoreModule.forFeature("login", loadingReducer)
 ]

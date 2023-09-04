@@ -6,6 +6,7 @@ import { LoadingState } from 'src/store/loading/LoadingState';
 import { hide, show } from 'src/store/loading/loading.actions';
 import { Store } from '@ngrx/store';
 import { AppState } from '../../../store/AppState';
+import { recoverPassword } from 'src/store/login/login.action';
 
 @Component({
   selector: 'app-login',
@@ -24,7 +25,7 @@ export class LoginPage implements OnInit {
   }
 
   forgotEmailPassword(){
-    this.store.dispatch(show())
+    this.store.dispatch(recoverPassword())
 
     setTimeout(()=>{
       this.store.dispatch(hide())
