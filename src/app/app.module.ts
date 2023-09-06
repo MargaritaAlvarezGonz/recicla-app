@@ -11,6 +11,10 @@ import { AppStoreModule } from 'src/store/App.StoreModule';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { LoadingComponent } from './components/loading/loading.component';
 import { LoginPageModule } from './pages/login/login.module';
+import { AngularFireModule } from "@angular/fire/compat";
+
+
+import { environment } from 'src/environments/environment';
 
 
 
@@ -18,6 +22,7 @@ import { LoginPageModule } from './pages/login/login.module';
 @NgModule({
   declarations: [AppComponent, LoadingComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, PickupCallCardModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
     ...AppStoreModule,
   StoreDevtoolsModule.instrument({maxAge: 25})],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
